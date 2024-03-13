@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/view/home_screen1/widgets/button.dart';
 import 'package:quizapp/view/home_screen1/widgets/option_box.dart';
 
 class Homescreen1 extends StatelessWidget {
@@ -40,7 +41,8 @@ class Homescreen1 extends StatelessWidget {
                 ),
                 itemCount: 4,
               ),
-            )
+            ),
+            Nextbutton()
           ],
         ),
       ),

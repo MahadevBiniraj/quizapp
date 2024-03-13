@@ -6,8 +6,9 @@ class Optionbox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
-      width: 350,
+      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+      // height: 50,
+      // width: 350,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(color: Colors.white)),
