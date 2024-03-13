@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/controller/controller.dart';
+
 import 'package:quizapp/view/home_screen1/widgets/button.dart';
 import 'package:quizapp/view/home_screen1/widgets/option_box.dart';
 
-class Homescreen1 extends StatelessWidget {
+class Homescreen1 extends StatefulWidget {
   const Homescreen1({super.key});
 
+  @override
+  State<Homescreen1> createState() => _Homescreen1State();
+}
+
+class _Homescreen1State extends State<Homescreen1> {
+  int currentquestionindex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,9 +29,10 @@ class Homescreen1 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   color: Color(0xff424242)),
               child: Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(10.0),
                 child: Text(
-                  "What is the most popular sport throughout the world?",
+                  QuestionScreenController
+                      .questionList[currentquestionindex].question,
                   style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w500,
