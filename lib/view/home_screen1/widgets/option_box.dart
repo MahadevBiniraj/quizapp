@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/controller/controller.dart';
 
-class Optionbox extends StatelessWidget {
+class Optionbox extends StatefulWidget {
   const Optionbox({super.key});
 
+  @override
+  State<Optionbox> createState() => _OptionboxState();
+}
+
+class _OptionboxState extends State<Optionbox> {
+  int currentquestionindex=0;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,18 +21,7 @@ class Optionbox extends StatelessWidget {
           border: Border.all(color: Colors.white)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            "volleyball",
-            style: TextStyle(
-              fontSize: 15,
-              color: Colors.white,
-            ),
-          ),
-          CircleAvatar(
-            radius: 10,
-          )
-        ],
+        children: List.generate(QuestionScreenController.questionList.length, (index) => )
       ),
     );
   }
